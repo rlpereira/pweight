@@ -6,11 +6,18 @@ window.pWeight = {
   init: function() {
     this.listWrapper = document.querySelector('#list-wrapper');
     this.formWrapper = document.querySelector('#form-wrapper');
+    this.loaderWrapper = document.querySelector('#app-loader');
+
+    this.loaderWrapper.innerHTML = app.LoaderView.init();
 
     this.initializeCollection();
     this.renderForm();
     this.bindForm();
     this.renderList();
+
+    setTimeout(function() {
+      app.LoaderView.hide();
+    }, 3500);
   },
 
   initializeCollection: function() {
