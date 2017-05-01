@@ -1,0 +1,41 @@
+body {
+  background: #EFEFEF;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  width: 75%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 16px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  float: left;
+}
+
+button {
+  width: 25%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: center;
+  background: rgb(96,125,139);
+  color: #FFFFFF;
+  float: right;
+}
+
+.form-wrapper {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 10px;
+}
+
+form {
+  display: table;
+  width: 100%;
+}
