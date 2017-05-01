@@ -4,6 +4,10 @@
   "description": "just another tool to log weight",
   "main": "app.js",
   "scripts": {
+    "dev": "http-server -a 0.0.0.0",
+    "build": "concurrently  'npm run scripts' 'npm run styles'",
+    "scripts": "uglifyjs ./src/views/loader.js  ./src/models/weight.js  ./src/collections/weights.js  ./src/views/form.js  ./src/views/weight.js  ./src/views/list.js ./src/app.js -o ./dist/build.js --compress --mangle",
+    "styles": "minify --output ./src/styles/pweight.css ./src/styles/fontello.css ./src/styles/main.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -12,5 +16,15 @@
     "log"
   ],
   "author": "RLPereira",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "concurrently": "^3.4.0",
+    "http-server": "^0.10.0",
+    "minifier": "^0.8.1",
+    "uglify-js": "^2.8.22"
+  }
 }

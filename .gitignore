@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 .tmp
 .sass-cache
+src/styles/pweight.css
+dist/
