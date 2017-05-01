@@ -10,7 +10,7 @@ input {
   margin: 0;
   padding: 0;
   border: none;
-  font-size: 16px;
+  font-size: 24px;
   padding: 10px 10px;
   box-sizing: border-box;
   float: left;
@@ -38,4 +38,12 @@ button {
 form {
   display: table;
   width: 100%;
+}
+
+ul {
+  margin-left: 15px;
+}
+
+li {
+  font-size: 36px;
 }

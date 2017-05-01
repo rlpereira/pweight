@@ -15,7 +15,6 @@ window.pWeight = {
 
   initializeCollection: function() {
     app.Collection.init();
-    app.Collection.inspect();
   },
 
   renderForm: function() {

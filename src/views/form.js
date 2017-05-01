@@ -6,21 +6,31 @@ window.app.FormView = {
   },
 
   bindEvents: function() {
-    var btn = document.querySelector('#submit-btn');
     var self = this;
+    this.input = document.querySelector('#weight-input');
+    this.btn = document.querySelector('#submit-btn');
 
-    btn.addEventListener('click', function(ev) {
+    this.btn.addEventListener('click', function(ev) {
       ev.preventDefault();
-      var input = document.querySelector('#weight-input');
-      var value = input.value;
-      pWeight.addWeight(value);
-      self.clearForm();
+      var value = this.input.value;
+
+      if(self.validate(value)) {
+        pWeight.addWeight(value);
+        self.clearForm();
+      }
     });
   },
 
+  validate: function(value) {
+    if(!value || value === undefined || value === null) {
+      return false;
+    }
+
+    return true;
+  },
+
   clearForm: function() {
-    var input = document.querySelector('#weight-input');
-    input.value = '';
+    this.input.value = '';
   },
 
   render: function() {

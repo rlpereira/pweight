@@ -7,6 +7,6 @@ window.app.ItemView = {
   },
 
   render: function() {
-    return '<li>' + this.weight + '</li>';
+    return '<li>' + this.weight + ' kg</li>';
   }
 };
