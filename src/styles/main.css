@@ -23,7 +23,7 @@ button {
   padding: 0;
   border: none;
   text-align: center;
-  background: rgb(96,125,139);
+  background: rgb(244,67,54);
   color: #FFFFFF;
   float: right;
 }
@@ -32,7 +32,7 @@ button {
   position: relative;
   display: block;
   margin: 0;
-  padding: 10px;
+  padding: 15px;
 }
 
 form {
@@ -41,9 +41,20 @@ form {
 }
 
 ul {
-  margin-left: 15px;
+  margin: 0 15px;
+  padding: 0;
+  display: block;
+  position: relative;
+  list-style: none;
 }
 
 li {
   font-size: 36px;
+  margin: 10px 0;
+  display: block;
+  position: relative;
+  padding: 10px 40px 10px 20px;
+  background: rgb(96,125,139);
+  color: #dedede;
+  font-weight: 400;
 }

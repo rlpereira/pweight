@@ -12,7 +12,7 @@ window.app.FormView = {
 
     this.btn.addEventListener('click', function(ev) {
       ev.preventDefault();
-      var value = this.input.value;
+      var value = self.input.value;
 
       if(self.validate(value)) {
         pWeight.addWeight(value);
@@ -34,6 +34,6 @@ window.app.FormView = {
   },
 
   render: function() {
-    return '<form><input id="weight-input" type="text" /><button id="submit-btn" type="submit">Send</button></form>';
+    return '<form><input id="weight-input" type="number" /><button id="submit-btn" type="submit">Send</button></form>';
   }
 };
