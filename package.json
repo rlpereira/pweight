@@ -1,7 +1,8 @@
 {
   "name": "pweight",
-  "version": "0.0.1",
-  "description": "just another tool to log weight",
+  "version": "0.0.2",
+  "private": true,
+  "description": "just another tool to log weight and learn JS ;) - version Vanilla JS",
   "main": "app.js",
   "scripts": {
     "dev": "http-server -a 0.0.0.0",
