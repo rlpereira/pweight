@@ -4,3 +4,4 @@ node_modules
 .sass-cache
 src/styles/pweight.css
 dist/
+dump.rdb
