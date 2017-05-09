@@ -8,9 +8,9 @@ It's still persisting data on localStorage, You should implement the backend if 
 Clone the repo, run:
 ```sh
 npm install
+npm run build
+npm run dev
 ```
-
-and then open the index.html file directly on browser.
 
 ### Next Features
 * log mood besides weight

@@ -38,7 +38,7 @@
   }
 
   FormView.prototype.render = function (weight) {
-    this.container.innerHTML = '<form><input id="weight-input" type="number" /><button id="submit-btn" type="submit">Send</button></form>';
+    this.container.innerHTML = '<form><input placeholder="Qual o seu peso hj?" id="weight-input" type="number" /><button id="submit-btn" type="submit">Send</button></form>';
   }
 
   // Export to window
