@@ -1,12 +1,11 @@
-window.app = window.app || {};
+(function (window) {
+	'use strict';
 
-window.app.Model = {
-  init: function(weight) {
-    if(!weight) {
-      return false;
-    }
-
+  function Model(weight) {
     this.value = weight;
-    return this;
   }
-}
+
+  // Export to window
+	window = window || {};
+	window.Model = Model;
+})(window);

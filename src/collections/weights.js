@@ -1,29 +1,34 @@
-window.app = window.app || {};
+(function (window) {
+	'use strict';
 
-window.app.Collection = {
-  init: function() {
+  function Collection(model) {
+    this.model = model;
     this.weights = this.load();
-  },
+  }
 
-  addWeight: function(weight) {
-    this.weights.unshift( new app.Model.init(weight) );
+  Collection.prototype.addWeight = function (weight) {
+    this.weights.unshift( new this.model(weight) );
     this.save();
-  },
+	};
 
-  load: function() {
+  Collection.prototype.load = function (weight) {
     if(!localStorage.weights) {
       return [];
     }
 
     return JSON.parse(localStorage.weights);
-  },
+	};
 
-  save: function() {
+  Collection.prototype.save = function (weights) {
     var weights = this.weights || [];
     localStorage.weights = JSON.stringify(weights);
-  },
+	};
 
-  inspect: function() {
+  Collection.prototype.inspect = function () {
     console.log(this.weights);
-  }
-};
+	};
+
+  // Export to window
+	window = window || {};
+	window.Collection = Collection;
+})(window);

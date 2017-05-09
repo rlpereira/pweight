@@ -1,12 +1,16 @@
-window.app = window.app || {};
+(function (window) {
+	'use strict';
 
-window.app.FormView = {
-  init: function() {
-    return this.render();
-  },
+  function FormView(controller) {
+    this.controller = controller;
+    this.container = document.querySelector('#form-wrapper');
+    this.render();
+    this.bind();
+  }
 
-  bindEvents: function() {
+  FormView.prototype.bind = function (weight) {
     var self = this;
+
     this.input = document.querySelector('#weight-input');
     this.btn = document.querySelector('#submit-btn');
 
@@ -15,25 +19,29 @@ window.app.FormView = {
       var value = self.input.value;
 
       if(self.validate(value)) {
-        pWeight.addWeight(value);
+        self.controller.addWeight(value);
         self.clearForm();
       }
     });
-  },
+  }
 
-  validate: function(value) {
-    if(!value || value === undefined || value === null) {
+  FormView.prototype.validate = function (value) {
+    if(!value || value === undefined || value === null || value === '') {
       return false;
     }
 
     return true;
-  },
-
-  clearForm: function() {
-    this.input.value = '';
-  },
-
-  render: function() {
-    return '<form><input id="weight-input" type="number" /><button id="submit-btn" type="submit">Send</button></form>';
   }
-};
+
+  FormView.prototype.clearForm = function (weight) {
+    this.input.value = '';
+  }
+
+  FormView.prototype.render = function (weight) {
+    this.container.innerHTML = '<form><input id="weight-input" type="number" /><button id="submit-btn" type="submit">Send</button></form>';
+  }
+
+  // Export to window
+	window = window || {};
+	window.FormView = FormView;
+})(window);

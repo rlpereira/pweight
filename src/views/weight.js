@@ -1,12 +1,15 @@
-window.app = window.app || {};
+(function (window) {
+	'use strict';
 
-window.app.ItemView = {
-  init: function(weight) {
-    this.weight = weight.value;
-    return this.render();
-  },
+  function ItemView(weight) {
+    this.weight = weight;
+  }
 
-  render: function() {
+  ItemView.prototype.render = function (weight) {
     return '<li>' + this.weight + ' kg</li>';
   }
-};
+
+  // Export to window
+	window = window || {};
+	window.ItemView = ItemView;
+})(window);

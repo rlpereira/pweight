@@ -1,22 +1,26 @@
-window.app = window.app || {};
+(function (window) {
+	'use strict';
 
-window.app.ListView = {
-  init: function(collection) {
+  function ListView(collection) {
+    this.container = document.querySelector('#list-wrapper');
     this.collection = collection;
-    return this.render();
-  },
+    this.render();
+  }
 
-  render: function() {
+  ListView.prototype.render = function () {
     var template =  '<ul>';
 
     for (var i = 0; i < this.collection.length; i++) {
-      var weight = this.collection[i];
-      var li = app.ItemView.init(weight);
-      template += li;
+      var li = new ItemView(this.collection[i].value);
+      template += li.render();
     }
 
     template += '</ul>';
 
-    return template;
+    this.container.innerHTML = template;
   }
-};
+
+  // Export to window
+	window = window || {};
+	window.ListView = ListView;
+})(window);
