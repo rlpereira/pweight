@@ -19,7 +19,7 @@
     return JSON.parse(localStorage.weights);
 	};
 
-  Collection.prototype.save = function (weights) {
+  Collection.prototype.save = function () {
     var weights = this.weights || [];
     localStorage.weights = JSON.stringify(weights);
 	};

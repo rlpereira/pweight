@@ -5,7 +5,7 @@
     var self = this;
     this.container = document.querySelector('#app-loader');
     this.render();
-    setTimeout(self.hide.bind(this), 1500);
+    setTimeout(self.hide.bind(this), 999);
   }
 
   LoaderView.prototype.hide = function () {
