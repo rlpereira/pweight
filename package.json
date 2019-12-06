@@ -19,7 +19,7 @@
   "author": "RLPereira",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.2.1",
+    "jquery": "^3.4.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
