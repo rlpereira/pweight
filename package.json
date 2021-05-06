@@ -20,7 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.2.1",
-    "underscore": "^1.8.3"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "concurrently": "^3.4.0",
